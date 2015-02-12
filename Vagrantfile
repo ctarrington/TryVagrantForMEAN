@@ -68,5 +68,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get update
     /vagrant/ProvisionScripts/01_Utilities.sh
     /vagrant/ProvisionScripts/03_node.sh
+    cd /vagrant
+    npm install --no-bin-links
   SHELL
 end
