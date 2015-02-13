@@ -66,11 +66,17 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
+    apt-get install -y dos2unix
+    dos2unix /vagrant/ProvisionScripts/*.sh
+    dos2unix /vagrant/upstarts/*.conf
+
     /vagrant/ProvisionScripts/01_Utilities.sh
     /vagrant/ProvisionScripts/02_mongodb.sh
     /vagrant/ProvisionScripts/03_node.sh
+
     cd /vagrant
     npm install --no-bin-links
+    
     cp /vagrant/upstarts/*.conf /etc/init/
     start app
   SHELL
