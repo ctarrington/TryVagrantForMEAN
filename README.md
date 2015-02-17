@@ -21,17 +21,17 @@ tested with 1.7.2
 ## Start Up Vagrant
 1. Clone this project
 2. Open a terminal or CMD window to the repo directory
-3. host &gt; vagrant up   # coffee break?
+3. host&gt; vagrant up
 4. Browse to http://localhost:33000/yo
 5. You should see a hello message
 6. Browse to http://localhost:8080/debug?port=5858
 7. You should see node-inspector
-8. host &gt; vagrant ssh
-9. guest &gt; mongo
-10. You should see the CLI for mongoDB  # exit
-11. From the host OS edit app.js so the yo route says something else
+8. host&gt; vagrant ssh
+9. guest&gt; mongo
+10. You should see the CLI for mongoDB
+11. From the host OS edit app.js so that the /yo route says something else
 12. Refresh the browser and note that the message didn't change
-13. guest &gt; sudo restart app
+13. guest&gt; sudo restart app
 14. Refresh the browser and note that the message did change
 
 
